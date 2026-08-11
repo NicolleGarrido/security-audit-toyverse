@@ -1,117 +1,140 @@
-# Controls and Compliance Checklist
+# Risk Assessment
 
-## Assessment Overview
+## Purpose
 
-This checklist evaluates the security controls currently implemented by Botium Toys and identifies gaps that may increase cybersecurity and compliance risks.
+This risk assessment identifies the primary cybersecurity risks affecting Botium Toys based on the organization's current security posture, managed assets, and existing security controls.
 
-The assessment is based on the information provided in the Botium Toys risk assessment and the organization's current security posture.
-
----
-
-# 1. Security Controls Assessment
-
-| Security Control | Implemented | Assessment |
-|---|:---:|---|
-| Least Privilege | No | All employees currently have access to internally stored data. |
-| Disaster Recovery Plans | No | No disaster recovery plan is currently in place. |
-| Password Policies | Yes | A password policy exists, but its requirements are weak and outdated. |
-| Separation of Duties | No | Separation of duties has not been implemented. |
-| Firewall | Yes | A firewall is configured to block traffic based on defined security rules. |
-| Intrusion Detection System (IDS) | No | No IDS has been installed. |
-| Backups | No | Critical data is not currently backed up. |
-| Antivirus Software | Yes | Antivirus software is installed and regularly monitored. |
-| Manual Monitoring and Maintenance | Yes | Legacy systems are monitored and maintained, although there is no regular schedule. |
-| Encryption | No | Customer payment information is not encrypted. |
-| Password Management System | No | No centralized password management system is currently implemented. |
-| Physical Locks | Yes | Offices, storefront, and warehouse have sufficient locks. |
-| CCTV Surveillance | Yes | The physical location has up-to-date CCTV surveillance. |
-| Fire Detection and Prevention | Yes | Fire detection and prevention systems are functioning. |
+The assessment is aligned with the Identify function of the NIST Cybersecurity Framework (CSF), with emphasis on asset management, risk identification, and the potential impact of security weaknesses on business operations and critical assets.
 
 ---
 
-# 2. PCI DSS Compliance Assessment
+## Overall Risk Rating
 
-The Payment Card Industry Data Security Standard (PCI DSS) requirements were reviewed based on the current handling of customer payment information.
+**Risk Level:** High
 
-| PCI DSS Best Practice | Compliant | Assessment |
-|---|:---:|---|
-| Only authorized users have access to customer credit card information | No | All employees may have access to internally stored data and potentially cardholder information. |
-| Credit card information is stored, accepted, processed, and transmitted securely | No | Payment information is handled internally without encryption. |
-| Implement encryption procedures for payment data | No | Encryption is not currently implemented for customer credit card information. |
-| Adopt secure password management policies | No | Existing password requirements are weak and there is no centralized password management system. |
+**Risk Score:** 8/10
 
----
+The current security posture presents a high level of risk due to the absence of several important administrative, technical, and operational controls.
 
-# 3. GDPR Compliance Assessment
-
-The General Data Protection Regulation (GDPR) requirements were reviewed because Botium Toys serves customers in the European Union.
-
-| GDPR Best Practice | Compliant | Assessment |
-|---|:---:|---|
-| E.U. customer data is kept private and secure | No | Access controls and encryption are insufficient to adequately protect customer information. |
-| Notify E.U. customers within 72 hours of a breach | Yes | A notification plan has been established. |
-| Data is properly classified and inventoried | No | The organization currently has inadequate asset and data management. |
-| Privacy policies and procedures are enforced | Yes | Privacy policies, procedures, and processes have been developed and enforced. |
+The organization also faces potential compliance risks related to the protection of payment card information and customer data.
 
 ---
 
-# 4. SOC Type 1 and SOC Type 2 Assessment
+## Key Risk Areas
 
-The following practices were evaluated based on the organization's current access, confidentiality, integrity, and availability controls.
-
-| SOC Best Practice | Compliant | Assessment |
-|---|:---:|---|
-| User access policies are established | No | Least Privilege and Separation of Duties have not been implemented. |
-| Sensitive data is confidential and private | No | Sensitive information is accessible to all employees and is not encrypted. |
-| Data integrity is maintained | Yes | The IT department has implemented controls to support data integrity. |
-| Data is available to authorized individuals | Yes | The IT department has implemented controls supporting data availability. |
-
----
-
-# 5. Key Findings
-
-The assessment identified several high-priority security and compliance gaps.
-
-### Critical Findings
-
-- Excessive access to sensitive information
-- Lack of encryption for payment information
-- No disaster recovery plan
-- No backups for critical data
-- No centralized password management
-- No Intrusion Detection System
-
-### Additional Findings
-
-- Password requirements are outdated.
-- Legacy system monitoring does not follow a defined schedule.
-- Asset management and classification require improvement.
-- Separation of duties has not been implemented.
+| Risk Area | Current Condition | Potential Impact |
+|---|---|---|
+| Asset management | Assets are not adequately managed or classified | Difficulty identifying critical assets and prioritizing protection |
+| Access control | Least privilege and separation of duties are not implemented | Increased risk from compromised or unauthorized accounts |
+| Payment data protection | Encryption is not currently implemented | Increased risk to the confidentiality of payment card information |
+| Business continuity | No disaster recovery plan or backups for critical data | Increased risk of data loss and operational disruption |
+| Threat detection | No intrusion detection system (IDS) is installed | Reduced ability to detect anomalous network activity |
+| Password security | Existing password requirements are insufficient | Increased risk of account compromise |
+| Password management | No centralized password management system exists | Increased password-related security and operational risks |
+| Legacy systems | Systems require manual monitoring and maintenance without a regular schedule | Increased risk from outdated systems and unclear intervention procedures |
+| Regulatory compliance | Some compliance best practices are not currently implemented | Potential regulatory penalties and increased exposure of sensitive data |
 
 ---
 
-# 6. Positive Security Controls
+## Existing Security Controls
 
-Despite the identified gaps, Botium Toys has several controls already in place:
+The assessment identified the following controls as currently implemented:
 
-- Firewall protection
+- Firewall
 - Antivirus software
 - Physical locks
-- CCTV surveillance
-- Fire detection and prevention
+- Closed-circuit television (CCTV) surveillance
+- Fire detection and prevention systems
 - Data integrity controls
 - Data availability controls
-- GDPR breach notification planning
-- Privacy policies and procedures
+- GDPR-related breach notification procedures
+- Privacy policies, procedures, and processes
 
-These controls provide a foundation for improving the organization's overall security posture.
+These controls provide important layers of protection; however, additional controls are required to address the organization's current risk exposure.
 
 ---
 
-# 7. Assessment Conclusion
+## Missing or Insufficient Controls
 
-Botium Toys has implemented several foundational security controls, but significant gaps remain in access control, data protection, business continuity, monitoring, and compliance.
+The following controls were identified as missing or insufficient:
 
-The highest priorities should be protecting sensitive customer information, limiting access to authorized personnel, establishing backup and disaster recovery capabilities, and strengthening password management.
+- Least privilege
+- Separation of duties
+- Intrusion Detection System (IDS)
+- Disaster recovery plans
+- Backups of critical data
+- Encryption
+- Centralized password management
+- Adequate password complexity requirements
+- Regularly scheduled monitoring and maintenance for legacy systems
+- Appropriate asset classification and inventory
 
-These improvements would reduce the organization's overall risk and improve its ability to protect critical business and customer data.
+These gaps increase the potential impact of security incidents, data exposure, operational disruption, and compliance issues.
+
+---
+
+## Compliance Risk
+
+The current security posture creates potential compliance concerns involving:
+
+### PCI DSS
+
+Payment card information is accepted, processed, transmitted, and stored internally. Encryption and appropriate access restrictions are not fully implemented.
+
+### GDPR
+
+The organization has established a plan to notify European Union customers within 72 hours of a security breach and has established privacy procedures. However, appropriate data classification and protection controls remain important areas for improvement.
+
+### SOC Type 1 and SOC Type 2
+
+The organization has controls supporting data availability and integrity, but access control and confidentiality requirements require additional attention.
+
+---
+
+## Business Impact
+
+If the identified risks are not addressed, the organization could experience:
+
+- Exposure of customer information
+- Compromise of payment card information
+- Unauthorized access to sensitive data
+- Data loss
+- Business disruption
+- Recovery difficulties following a security incident
+- Regulatory penalties
+- Financial losses
+- Loss of customer trust
+
+---
+
+## Risk Assessment Conclusion
+
+The overall risk score of **8/10** indicates that corrective action should be prioritized.
+
+The highest priorities should include protecting sensitive customer and payment information, implementing appropriate access controls, establishing reliable backup and disaster recovery capabilities, improving password security, and strengthening threat detection.
+
+Improving these areas would reduce the organization's exposure to cybersecurity threats and support a stronger overall security posture.
+
+---
+
+## Recommended Priority
+
+### Priority 1 — Protect sensitive data
+
+Implement encryption and restrict access to sensitive customer and payment information according to job responsibilities.
+
+### Priority 2 — Improve business continuity
+
+Establish disaster recovery procedures and implement reliable backups of critical data.
+
+### Priority 3 — Strengthen access and authentication
+
+Implement least privilege, separation of duties, stronger password requirements, and centralized password management.
+
+### Priority 4 — Improve detection capabilities
+
+Evaluate and implement an Intrusion Detection System (IDS) to improve the organization's ability to identify suspicious activity.
+
+### Priority 5 — Improve asset and legacy-system management
+
+Create an accurate asset inventory and establish a documented schedule for monitoring and maintaining legacy systems.
