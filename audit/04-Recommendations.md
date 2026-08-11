@@ -2,193 +2,307 @@
 
 ## Purpose
 
-This document provides prioritized recommendations based on the findings identified during the Botium Toys internal cybersecurity audit.
+This document presents prioritized security recommendations based on the findings identified during the internal security audit.
 
-The objective is to reduce cybersecurity risk, protect critical assets and customer information, improve business continuity, and strengthen the organization's overall security posture.
-
----
-
-# Priority 1 — Protect Sensitive Data
-
-### Finding
-
-Customer payment information is stored, processed, transmitted, and accepted internally without encryption.
-
-### Recommendation
-
-Implement encryption for sensitive customer and payment information at appropriate storage and transmission points.
-
-### Expected Result
-
-Encryption will improve the confidentiality of sensitive information and reduce the potential impact of unauthorized access or data exposure.
-
-**Priority:** Critical
+The recommendations are intended to reduce organizational risk, protect critical assets, improve security controls, and strengthen the overall security posture of Botium Toys.
 
 ---
 
-# Priority 2 — Implement Least Privilege
+# Priority 1 — Protect Sensitive Information
 
-### Finding
+## Implement Encryption
 
-All employees currently have access to internally stored data and may be able to access customer PII/SPII and cardholder information.
+Botium Toys should implement encryption for sensitive customer and payment card information.
 
-### Recommendation
+### Objective
 
-Implement a Least Privilege access model. Users should receive only the permissions required to perform their job responsibilities.
+Protect the confidentiality of sensitive information during storage, processing, and transmission.
 
-Access to sensitive customer and payment information should be restricted to authorized personnel.
+### Risk Addressed
 
-### Expected Result
+- Exposure of payment card information
+- Unauthorized access to sensitive data
+- Compliance risk
 
-Reducing unnecessary access will lower the risk of unauthorized disclosure, compromised accounts, and insider threats.
+### Priority
 
-**Priority:** Critical
-
----
-
-# Priority 3 — Implement Backups and Disaster Recovery
-
-### Finding
-
-Botium Toys currently does not have backups of critical data or a disaster recovery plan.
-
-### Recommendation
-
-Establish a backup strategy for critical systems and data and develop a documented disaster recovery plan.
-
-Backups and recovery procedures should be tested regularly.
-
-### Expected Result
-
-The organization will be better prepared to recover from security incidents, system failures, or other business disruptions.
-
-**Priority:** Critical
+**Critical**
 
 ---
 
-# Priority 4 — Strengthen Password Security
+# Priority 2 — Strengthen Access Control
 
-### Finding
+## Implement Least Privilege
 
-A password policy exists, but its requirements are outdated. There is also no centralized password management system.
+Access to organizational data should be restricted according to each employee's job responsibilities.
 
-### Recommendation
+### Objective
 
-Strengthen password requirements and implement centralized password management.
+Ensure employees only have access to the information and systems required to perform their assigned duties.
 
-The organization should establish and enforce consistent password requirements across accounts and systems.
+### Risk Addressed
 
-### Expected Result
+- Unauthorized access
+- Compromised accounts
+- Insider threats
+- Excessive access to sensitive information
 
-Improved password security will reduce the likelihood of account compromise and improve the management of user credentials.
+### Priority
 
-**Priority:** High
-
----
-
-# Priority 5 — Implement Intrusion Detection
-
-### Finding
-
-The IT department does not currently have an Intrusion Detection System (IDS).
-
-### Recommendation
-
-Implement an IDS to monitor network activity and identify suspicious or anomalous traffic.
-
-Security alerts should be reviewed by authorized personnel as part of the organization's incident response process.
-
-### Expected Result
-
-An IDS can improve the organization's ability to detect potential security incidents and respond more quickly.
-
-**Priority:** High
+**Critical**
 
 ---
 
-# Priority 6 — Implement Separation of Duties
+## Implement Separation of Duties
 
-### Finding
+Critical responsibilities should be divided among multiple individuals where appropriate.
 
-Separation of duties has not been implemented.
+### Objective
 
-### Recommendation
+Reduce the risk associated with a single individual having excessive control over sensitive processes.
 
-Define responsibilities so that critical security and business processes are not controlled by a single individual when separation is appropriate.
+### Risk Addressed
 
-### Expected Result
+- Insider threats
+- Unauthorized changes
+- Fraudulent activity
+- Compromised accounts
 
-Separation of duties can reduce the risk associated with malicious insiders, compromised accounts, and unauthorized changes.
+### Priority
 
-**Priority:** High
-
----
-
-# Priority 7 — Improve Asset Management
-
-### Finding
-
-The organization currently has inadequate asset management and does not have a complete understanding of which assets may be at risk.
-
-### Recommendation
-
-Create and maintain an inventory of organizational assets, including hardware, software, systems, data, and legacy systems.
-
-Assets should be classified according to their importance and sensitivity.
-
-### Expected Result
-
-Improved asset visibility will help the organization identify critical resources, prioritize security controls, and better understand business impact.
-
-**Priority:** High
+**High**
 
 ---
 
-# Priority 8 — Improve Legacy System Management
+# Priority 3 — Improve Business Continuity
 
-### Finding
+## Establish Disaster Recovery Procedures
 
-Legacy systems are monitored and maintained manually, but there is no regular schedule and intervention procedures are unclear.
+Botium Toys should develop and document disaster recovery procedures for critical systems and data.
 
-### Recommendation
+### Objective
 
-Establish documented procedures and a regular maintenance schedule for legacy systems.
+Provide a structured process for restoring business operations following a disruptive event.
 
-### Expected Result
+### Risk Addressed
 
-A structured process will improve the organization's ability to identify and manage vulnerabilities associated with outdated systems.
+- Business interruption
+- Extended service disruption
+- Data loss
+- Recovery delays
 
-**Priority:** Medium
+### Priority
+
+**Critical**
 
 ---
 
-# Recommended Implementation Order
+## Implement Backups
 
-| Priority | Recommendation | Risk Addressed |
+Critical business data should be backed up using a documented and regularly tested backup process.
+
+### Objective
+
+Provide the ability to restore critical information following data loss or a security incident.
+
+### Risk Addressed
+
+- Permanent data loss
+- Ransomware impact
+- System failure
+- Business continuity issues
+
+### Priority
+
+**Critical**
+
+---
+
+# Priority 4 — Strengthen Authentication
+
+## Improve Password Requirements
+
+The existing password policy should be updated to establish stronger minimum security requirements.
+
+Recommended requirements include:
+
+- Minimum password length
+- Combination of letters and numbers
+- Special characters
+- Protection against commonly used passwords
+- Regular review of password requirements
+
+### Risk Addressed
+
+- Brute-force attacks
+- Dictionary attacks
+- Account compromise
+
+### Priority
+
+**High**
+
+---
+
+## Implement Centralized Password Management
+
+A centralized password management solution should be considered to enforce password requirements and improve password recovery processes.
+
+### Objective
+
+Improve authentication security while reducing password-related operational issues.
+
+### Risk Addressed
+
+- Weak passwords
+- Password reuse
+- Password recovery issues
+- Inconsistent enforcement of password policies
+
+### Priority
+
+**High**
+
+---
+
+# Priority 5 — Improve Threat Detection
+
+## Implement an Intrusion Detection System
+
+Botium Toys should evaluate and implement an Intrusion Detection System (IDS).
+
+### Objective
+
+Improve the organization's ability to detect anomalous or suspicious network activity.
+
+### Risk Addressed
+
+- Undetected network attacks
+- Suspicious network traffic
+- Delayed incident detection
+
+### Priority
+
+**High**
+
+---
+
+# Priority 6 — Improve Asset Management
+
+## Establish an Asset Inventory
+
+The organization should maintain an accurate inventory of hardware, software, systems, services, data, and other critical assets.
+
+### Objective
+
+Identify which assets exist, who is responsible for them, and which assets require the highest level of protection.
+
+### Risk Addressed
+
+- Unknown assets
+- Inadequate protection
+- Poor risk prioritization
+- Business continuity issues
+
+### Priority
+
+**High**
+
+---
+
+## Classify Sensitive Data
+
+Sensitive information should be identified and classified according to its importance and security requirements.
+
+Examples include:
+
+- Payment card information
+- Personally identifiable information (PII)
+- Sensitive personally identifiable information (SPII)
+- Business-critical data
+
+### Priority
+
+**High**
+
+---
+
+# Priority 7 — Improve Legacy System Management
+
+## Establish a Maintenance Schedule
+
+Legacy systems should have a documented schedule for monitoring, maintenance, and intervention.
+
+### Objective
+
+Ensure that outdated systems are regularly reviewed and that potential vulnerabilities are identified and managed.
+
+### Risk Addressed
+
+- Unpatched vulnerabilities
+- Outdated systems
+- Unclear intervention procedures
+- Increased attack surface
+
+### Priority
+
+**Medium**
+
+---
+
+# Priority 8 — Strengthen Compliance Practices
+
+Botium Toys should regularly review its security controls against applicable compliance requirements, including:
+
+- PCI DSS
+- GDPR
+- SOC Type 1
+- SOC Type 2
+
+### Objective
+
+Identify compliance gaps and ensure that security controls continue to support regulatory and organizational requirements.
+
+### Priority
+
+**High**
+
+---
+
+# Recommended Implementation Roadmap
+
+| Phase | Focus | Priority |
 |---|---|---|
-| 1 | Implement encryption | Sensitive data exposure |
-| 2 | Implement Least Privilege | Unauthorized access |
-| 3 | Implement backups and disaster recovery | Data loss and business interruption |
-| 4 | Strengthen password security | Account compromise |
-| 5 | Implement IDS | Delayed threat detection |
-| 6 | Implement Separation of Duties | Insider and account compromise risks |
-| 7 | Improve asset management | Unknown or unmanaged assets |
-| 8 | Improve legacy system management | Outdated system vulnerabilities |
+| Phase 1 | Encryption and access control | Critical |
+| Phase 2 | Backups and disaster recovery | Critical |
+| Phase 3 | Password security and management | High |
+| Phase 4 | IDS and threat detection | High |
+| Phase 5 | Asset inventory and data classification | High |
+| Phase 6 | Legacy system management | Medium |
+| Phase 7 | Compliance review and continuous improvement | High |
 
 ---
 
-# Final Recommendation
+# Expected Outcomes
 
-Botium Toys should prioritize the controls that protect sensitive customer information, restrict unnecessary access, and support business continuity.
+Implementing these recommendations should help Botium Toys:
 
-The organization should implement the highest-priority recommendations first and periodically review the effectiveness of the controls.
-
-Security procedures and documentation should also be updated as the organization's systems, risks, and business operations change.
+- Reduce cybersecurity risk
+- Protect sensitive customer information
+- Improve access control
+- Strengthen authentication
+- Improve business continuity
+- Improve detection capabilities
+- Reduce potential compliance exposure
+- Improve asset visibility
+- Strengthen the overall security posture
 
 ---
 
 # Conclusion
 
-Implementing these recommendations will help Botium Toys reduce its current high-risk security posture and establish a stronger foundation for cybersecurity and regulatory compliance.
+The audit identified several significant security and compliance gaps that should be addressed according to their level of risk.
 
-The recommendations should be tracked by the IT department and reviewed periodically to measure progress and identify additional security improvements.
+Immediate attention should be given to sensitive data protection, access control, backups, disaster recovery, and authentication.
+
+Security controls should also be reviewed regularly to ensure that improvements remain effective as the organization's technology, operations, and risks evolve.
